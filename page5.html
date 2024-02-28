@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Journey Continues</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="container">
+        <h1>The Journey Continues</h1>
+        <p>With the guardian's riddle behind you, the path forward splits into three. Each route is known to favor
+            certain
+            traits: strength, wisdom, or stealth. Choose your path wisely, as it will influence the challenges you face
+            ahead.
+        </p>
+
+        <form action="page6.html" method="GET">
+            <label for="pathChoice">Choose your path:</label>
+            <select id="pathChoice" name="pathChoice" required>
+                <option value="">--Please choose an option--</option>
+                <option value="strength">Strength</option>
+                <option value="wisdom">Wisdom</option>
+                <option value="stealth">Stealth</option>
+            </select>
+            <button id="submitButton" type="submit">Continue on Your Journey</button>
+        </form>
+
+        <p>Your choice will not only test your abilities but also reveal deeper truths about your character.</p>
+    </section>
+
+    <script>
+        const pathChoice = document.getElementById("pathChoice");
+        const submitButton = document.getElementById("submitButton");
+        const form = document.querySelector("form");
+
+        pathChoice.addEventListener("change", function () {
+            const body = document.querySelector("body");
+            if (pathChoice.value === "strength") {
+                body.style.backgroundColor = "pink";
+            } else if (pathChoice.value === "wisdom") {
+                body.style.backgroundColor = "lightblue";
+            } else if (pathChoice.value === "stealth") {
+                body.style.backgroundColor = "lightgreen";
+            } else {
+                body.style.backgroundColor = "white";
+            }
+        });
+
+        submitButton.addEventListener("click", function () {
+            if (pathChoice.value === "stealth") {
+                form.action = "page5b.html";
+            }
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Final Showdown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="container">
+        <h1>The Final Showdown</h1>
+        <p>After a long journey filled with trials and challenges, you finally stand before Bella's lair. The dark
+            sorcerer
+            awaits, the Crystal of Wisdom in his grasp. It's time to make your move.</p>
+        <form action="page7.html" method="GET">
+            <fieldset>
+                <legend>How will you confront Bella?</legend>
+                <label for="finalChoice">Choose wisely:</label>
+                <select id="finalChoice" name="finalChoice" required>
+                    <option value="">--Please choose an option--</option>
+                    <option value="fight">Fight Bella</option>
+                    <option value="negotiate">Negotiate with Bella</option>
+                    <option value="sneak">Sneak past Bella</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Character Information</legend>
+                <fieldset>
+                    <legend>The Brave</legend>
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Select Your Weapon:</legend>
+                    <input type="radio" id="sword" name="weapon" value="sword">
+                    <label for="sword">Sword</label>
+                    <input type="radio" id="bow" name="weapon" value="bow">
+                    <label for="bow">Bow</label>
+                    <input type="radio" id="staff" name="weapon" value="staff">
+                    <label for="staff">Staff</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Select Your Armor:</legend>
+                    <input type="checkbox" id="plateArmor" name="armor" value="plateArmor">
+                    <label for="plateArmor">Plate Armor</label>
+                    <input type="checkbox" id="leatherArmor" name="armor" value="leatherArmor">
+                    <label for="leatherArmor">Leather Armor</label>
+                    <input type="checkbox" id="cloak" name="armor" value="cloak">
+                    <label for="cloak">Cloak</label>
+                </fieldset>
+                <legend>Leave a Message for Bella:</legend>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea>
+
+            </fieldset>
+            <button id="submitButton" type="submit">Face Bella</button>
+        </form>
+        <p>Your choice here will determine the fate of the kingdom. Choose wisely.</p>
+    </section>
+</body>
+
+</html>
